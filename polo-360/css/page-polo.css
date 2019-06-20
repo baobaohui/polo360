@@ -1,0 +1,340 @@
+/*
+    编辑主页的样式表
+*/
+/*
+    设置body
+*/
+body{
+    /* 背景图片 水平方向重复 */
+    background: url("../img/bd-bg.png") repeat-x;
+
+    height: 1500px;
+}
+/*解决高度塌陷问题*/
+.clearfix:before,
+.clearfix:after{
+    content:"";
+    display: table;
+    clear:both;
+}
+/*
+    固定元素的宽度和居中
+*/
+.w{
+    width: 940px;
+    margin: 0 auto;
+}
+/*
+    设置header
+*/
+.header{
+    /*background-color: #bfa;*/
+/*    设置一个上 下内边距*/
+    padding-top: 37px;
+    padding-bottom: 46px;
+}
+.logo{
+    padding-left: 15px;
+}
+/*设置导航条*/
+.nav{
+/*    设置向右浮动*/
+    float: right;
+/*    设置上外边距*/
+    margin-top: 22px;
+}
+/*导航条中 列表项 向左浮动*/
+.nav li{
+    float: left;
+    padding: 0 10px 10px;
+/*    设置左边框*/
+    border-left: 1px #d6d6d6 dotted;
+}
+/*设置导航条中超链接*/
+.nav a{
+    font: bold 14px Georgia;
+    color: #666;
+    text-decoration: none;
+}
+.nav a:hover{
+    color: #a1a1a1;
+    text-decoration: underline;
+}
+/*设置导航条中 小标题
+在chrome 中 最小字体 为 12px
+*/
+.nav p{
+    color: #b7b7b7;
+    font: 11px Tahoma;
+}
+
+/*设置 banner*/
+
+.banner{
+    /*设置高度*/
+    height: 356px;
+    /*设置背景*/
+    background: url("../img/banner-bg.png") no-repeat bottom center;
+/*    开启一个相对定位*/
+    position: relative;
+}
+.pointerDiv{
+/*    开启绝对定位*/
+    position:absolute;
+    /*为导航点进行定位*/
+    top: 314px;
+    left: 15px;
+}
+.pointerDiv a{
+    /*display: inline-block;*/
+    /*设置a浮动*/
+    float: left;
+    width: 17px;
+    height: 17px;
+
+    background: url("../img/pointer.png") no-repeat;
+/*    设置一个左外边距*/
+    margin-left: 4px;
+}
+/*设置超链接伪类 hover,和激活状态*/
+.pointerDiv .active,
+.pointerDiv a:hover
+{
+    background: url("../img/pointer-active.png") no-repeat;
+}
+/*设置content部分*/
+
+/*设置 content h1 标题*/
+.content h1{
+/*    文本居中*/
+    text-align: center;
+    /*设置字体*/
+    font: bold 24px Georgia;
+/*    设置上内边距6px 下内边距 20px*/
+    padding: 6px 0 20px 0;
+/*    设置一个下外边距*/
+    margin-bottom: 38px;
+/*    设置一个背景*/
+    background: url("../img/line.png") no-repeat bottom center;
+}
+/*中间的三个div*/
+.content .pl, .content .cs, .content .uc,
+.contact .sc, .contact .co, .contact .nu
+{
+/*    向左浮动*/
+    float:left;
+    width: 300px;
+    /*height: 100px;*/
+    /*background-color: yellow;*/
+}
+/*添加 边距*/
+.content .cs{
+    margin: 0 20px;
+}
+/*设置div中的标题*/
+.content h2{
+    color:#11719e;
+    font: 21px Georgia;
+}
+.content .p1{
+    color: #8c8c8c;
+    font: 12px Helvetica;
+}
+/*设置图片div*/
+.content .imgDiv{
+    width: 299px;
+    height: 190px;
+    background: url("../img/img-bg.png") no-repeat;
+    margin: 16px 0 10px 0;
+    /*设置水平居中*/
+    text-align: center;
+/*    设置上内边距*/
+    padding-top: 12px;
+}
+/*设置第二个段落*/
+.content .p2{
+    height: 92px;
+    color: #3e3e3e;
+    font: 13px Helvetica;
+    /*word-spacing: 2px;*/
+}
+
+/*设置按钮的样式*/
+.content .lm{
+    /*设置块元素*/
+    display: block;
+    width: 163px;
+    height: 40px;
+    background: url("../img/btn1.png") no-repeat;
+    text-decoration: none;
+    color: #016999;
+    /*设置文字的大小/行高 类型*/
+    font: 12px/40px Helvetica;
+    /*设置文字的缩进*/
+    text-indent: 1em;
+    /*设置下边距*/
+    margin-bottom: 35px;
+}
+/*设置背景*/
+.contact{
+    background: url("../img/line.png") no-repeat top center;
+    /*用一个背景选颜色来观察div的大小，查看是否塌陷等问题*/
+    /*background-color: red;*/
+}
+/*设置联系栏的高度和背景颜色，一会删除 目的在于在填充结束前规定高度*/
+/*.contact .sc, .contact .co, .contact .nu{*/
+/*    height: 500px;*/
+    /*background-color: yellow;*/
+/*}*/
+.contact .co{
+    margin: 0 20px;
+}
+/*设置联系栏中的表单项*/
+.contact .txt{
+    width: 276px;
+    height: 33px;
+    /*居中输入 设置行高 */
+    line-height: 33px;
+    /*设置输入框背景图片*/
+    background: url("../img/input.png") no-repeat;
+    /*单独为IE6 设置一个背景不随元素滚动*/
+    _background-attachment: fixed;
+/*    去除默认边框*/
+    border: none;
+    /*设置内边距会超过宽度296，所以将296-20=276*/
+    padding: 0 10px;
+    margin: 0px 0px 16px 0px ;
+}
+.contact .tarea{
+    width: 276px;
+    height: 114px;
+    background:url("../img/textarea.png") no-repeat;
+/*    去除默认边框*/
+    border: none;
+/*    去除滚动条*/
+    overflow: auto;
+/*    设置文本域不能调整大小*/
+    resize: none;
+/*    去除默认内外边距*/
+    padding: 10px;
+/*    margin: 0;*/
+}
+.contact .btn{
+    width: 163px;
+    height: 32px;
+    background: url("../img/btn2.png") no-repeat;
+    border: none;
+    padding: 0px;
+    margin: 11px 0px 23px 0px;
+    color: white;
+    font:13px Georgia;
+    /*设置按钮上的文字 靠左，有一个缩进*/
+    text-align: left;
+    text-indent: 1em;
+/*    cursor 可以用来设置鼠标指针的样式
+        可选值有很多个，可以根据需要自己选择(在 w3c)
+*/
+    cursor: pointer;
+}
+/*设置标题*/
+.contact h2{
+    color: #444;
+    font: 18px/1 Georgia;
+/*    设置下边框*/
+    border-bottom: 1px dashed #d3d3d3;
+/*    设置内边距*/
+    padding: 44px 0px 10px 0;
+    margin-bottom: 15px;
+}
+/*设置联系栏左侧*/
+.sc .p1{
+    color:#444;
+    font:12px/1 Helvetica;
+}
+.sc .icon{
+/*    设置字体大小为0，去除空格*/
+    font-size: 0;
+/*    设置上外边距*/
+    margin-top: 4px;
+}
+/*给图标设置一个右边距*/
+.sc .icon a{
+    margin-right: 6px;
+}
+/*设置左侧的第二个标题*/
+.sc .n1{
+    font: bold 18px/1 "gill sans mt";
+/*    设置内边距*/
+    padding: 34px 0px 10px;
+    /*设置下外边距*/
+
+}
+/*设置左侧的表单*/
+.sc .txt{
+    /*设置上外边距*/
+    margin-top: 15px;
+    /*为IE6设置上外边距*/
+    _margin-top:18px;
+    margin-bottom: 0px;
+}
+/*设置联系栏右侧*/
+/*设置文字*/
+.nu p{
+    color: #444;
+    font: 12px/1 Helvetica;
+    height: 58px;
+    /*单独给 IE6设置一个高度*/
+    _height: 60px;
+    border-bottom: 1px dashed #d3d3d3;
+    margin-bottom: 14px;
+    padding-bottom: 9px;
+}
+.nu .no-margin{
+    margin-bottom: 0px;
+}
+/*    设置图片向左浮动，达到文字环绕图片的目的*/
+.nu img{
+    float: left;
+    margin-right: 8px;
+}
+/*为最后一个按钮增加一个 IE6 样式*/
+.nu .btn{
+    _margin-left: -1em;
+}
+/*IE6 的双倍边距 bug，在IE6中，当为一个向左浮动的元素设置左外边距时或者为一个向右浮动的元素设置一个有外边距时
+    这个外边距将会是设置值的二倍
+    添加一个样式来解决IE6的双倍边距问题，对于浮动元素来说设置display：inline没有任何意义
+    但是该属性可以解决IE6的双倍边距问题
+    使用display：inline
+*/
+/*设置底部*/
+.footer{
+    height: 173px;
+    background: #333;
+/*    设置一个上边框*/
+    border-top: 10px solid #4c4c4c;
+}
+.footer a, .footer p{
+    color: #999;
+    font: 11px Helvetica;
+    text-decoration: none;
+}
+/*设置 a 元素的 hover*/
+.footer a:hover{
+    color: #cccaca;
+    text-decoration: underline;
+}
+.footer p{
+    margin-left: 8px;
+    margin-right: 23px;
+    margin-bottom: 6px;
+}
+.footer .w{
+    /*margin: 18px 23px 0px 8px;*/
+    padding-top: 18px;
+}
+.footer .copy{
+    float: right;
+    /*可以解决双倍边距问题 bug*/
+    display: inline;
+}
